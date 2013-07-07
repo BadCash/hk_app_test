@@ -63,7 +63,7 @@
 	</style>
   </head>
     
-  <body>
+  <body onload="onLoad()">
   
 	<div class="page" data-name="overview">
 		<div class="category" data-exec-function="change_page" data-pagename="greetings">
@@ -90,9 +90,8 @@
 			</div>
 			<div class="item_content">
 				Jim reap sour 
-				<div class="play_audio">
+				<div class="play_audio" data-src="eat.mp3">
 					Play
-					<audio src="eat.ogg"></audio>
 				</div>
 			</div>
 		</div>
@@ -110,10 +109,6 @@
 			</div>
 			<div class="item_content">
 				Jim reap sour 
-				<div class="play_audio">
-					Play
-					<audio src="eat.ogg"></audio>
-				</div>
 			</div>
 		</div>
 			

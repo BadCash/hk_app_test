@@ -1,5 +1,8 @@
-﻿// Wait for PhoneGap to load
-document.addEventListener("deviceready", onDeviceReady, false);
+﻿function onLoad(){
+	// Wait for PhoneGap to load
+	document.addEventListener("deviceready", onDeviceReady, false);
+}
+
 
 $('[data-exec-function]').on('click', function(event){
 	console.log('exec_function');
@@ -12,7 +15,10 @@ $('.item_title').on('click', function(event){
 });
 
 $('.play_audio').on('click', function(event){
-	$(this).children('audio')[0].play();
+	console.log('play_audio');
+	console.log( $(this).attr('data-src') );
+	var m = new Media( $(this).data('src'), mediaSuccess );
+	//media.play();
 });
 
 
@@ -26,4 +32,9 @@ function change_page(element, event){
 	console.log('change_page');
 	$('.page').hide();
 	$('.page[data-name="'+element.data('pagename')+'"]').show();
+}
+
+
+function mediaSuccess(){
+	console.log('mediaSuccess');
 }
