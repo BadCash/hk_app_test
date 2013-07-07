@@ -1,4 +1,8 @@
-﻿function onLoad(){
+﻿var media = null;
+
+
+
+function onLoad(){
 	// Wait for PhoneGap to load
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
@@ -17,8 +21,8 @@ $('.item_title').on('click', function(event){
 $('.play_audio').on('click', function(event){
 	console.log('play_audio');
 	console.log( $(this).attr('data-src') );
-	var m = new Media( $(this).data('src'), mediaSuccess );
-	//media.play();
+	media = new Media( $(this).data('src') );
+	media.play();
 });
 
 
