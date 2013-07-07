@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<!-- Uncomment this when running outside Ripple, comment it away when running inside Ripple (Ripple uses it's own Cordova implementation -->
+	<script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+	
+	<style type="text/css">
+		
+		html{
+			margin: 0;
+			padding: 0;
+		}
+		
+		body{
+			font-family: Verdana;
+			font-weight: bold;
+			background-color: white;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.button{
+			display: inline-block;
+			border: 1px solid black;
+			border-radius: 5px;
+			background-color: #E6DFC8;
+			padding: 0.5em 1em 0.5em 1em;
+		}
+		
+		.category{
+			background-color: #BFBFFF;
+			border: 1px solid black;
+			border-radius: 5px;
+			margin: 5px 0px 5px 0px;
+		}
+		
+			.category_title{
+				padding: 1em;
+			}
+
+		.item{
+			background-color: #BFBFFF;
+			border: 1px solid black;
+			border-radius: 5px;
+			margin: 5px 0px 5px 0px;
+		}
+		
+			.item_title{
+				padding: 1em;
+			}
+			
+			.item_content{
+				padding: 1em 1em 1em 2em;
+				background-color: white;
+				border-top: 1px solid black;
+				border-radius: 0px 0px 5px 5px;
+				display: none;
+			}
+	
+	</style>
+  </head>
+    
+  <body>
+  
+	<div class="page" data-name="overview">
+		<div class="category" data-exec-function="change_page" data-pagename="greetings">
+			<div class="category_title">
+				Greetings
+			</div>
+		</div>
+		
+		<div class="category" data-exec-function="change_page" data-pagename="general">
+			<div class="category_title">
+				General
+			</div>
+		</div>
+	</div>
+
+	<div class="page" data-name="greetings" style="display: none;">
+		<div class="nav">
+			<div class="button" data-exec-function="change_page" data-pagename="overview">&lt;&lt; Back</div>
+		</div>
+
+		<div class="item">
+			<div class="item_title">
+				Hello
+			</div>
+			<div class="item_content">
+				Jim reap sour 
+				<div class="play_audio">
+					Play
+					<audio src="eat.ogg"></audio>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="page" data-name="general" style="display: none;">
+		<div class="nav">
+			<div class="button" data-exec-function="change_page" data-pagename="overview">&lt;&lt; Back</div>
+		</div>
+		
+		<div class="item">
+			<div class="item_title">
+				Hello
+			</div>
+			<div class="item_content">
+				Jim reap sour 
+				<div class="play_audio">
+					Play
+					<audio src="eat.ogg"></audio>
+				</div>
+			</div>
+		</div>
+			
+		<div class="item">
+			<div class="item_title">
+				My name is ...
+			</div>
+			<div class="item_content">
+				Knjum chmour ...
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="item_title">
+				What is your name?
+			</div>
+			<div class="item_content">
+				Ta ner chmour avai?
+			</div>
+		</div>
+	<div>
+
+
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript" charset="utf-8" src="zepto.js"></script>
+    <script type="text/javascript" charset="utf-8" src="index.js"></script>
+</body>
+</html>
